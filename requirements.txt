@@ -1,4 +1,5 @@
 langchain
+openai
 chromadb
 gradio
 tiktoken
