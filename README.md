@@ -5,7 +5,7 @@ colorFrom: "blue"
 colorTo: "gray"
 sdk: "gradio"
 sdk_version: "4.8.0"
-app_file: "/CouncilReport.ipynb"
+app_file: "app.py"
 pinned: false
 ---
 

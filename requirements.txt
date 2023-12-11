@@ -1,0 +1,6 @@
+langchain
+chromadb
+gradio
+tiktoken
+youtube-transcript-api
+pytube
