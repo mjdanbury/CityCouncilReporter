@@ -151,9 +151,10 @@ def rag_respond(message, history):
 
 with gr.Blocks() as demo:
     gr.Markdown("# New York City Council AI Reporter")
-    gr.Markdown("Find [a video](https://www.youtube.com/@NYCCouncil/streams) of a past New York City Council meeting and paste the URL below. The AI reporter will analyze the video transcript and suggest story angles for you to pursue. This will take several minutes. Feel free to grab a coffe while you wait ☕️. When it finishes, you may ask it any followup questions and it will incorporate any relevant information it gleaned in its answers.")
+    gr.Markdown("Find [a video](https://www.youtube.com/@NYCCouncil/streams) of a past New York City Council meeting and paste the URL below, or for a quick demo, use the one provided. The AI reporter will analyze the video transcript and suggest story angles for you to pursue. This will take some time—roughly one minute for every 15 minutes of transcript (90 seconds for the demo). When it finishes, you may ask it any followup questions and it will incorporate any relevant information it gleaned in its answers.")
+    gr.Markdown('_Known Issue:_ Sometimes, in follow-up questions, the chatbot will claim that a topic listed in the story angles did not come up in the meeting, when in fact it did. To get it chatbot to "remember" this part of the meeting, simply insist "yes, that was discussed". This quirk will hopefully be addressed in future updates.')
     with gr.Row():
-        url_input = gr.Textbox(label="YouTube URL of Meeting")
+        url_input = gr.Textbox(value="https://www.youtube.com/watch?v=FzCLB5ZFLdk",label="YouTube URL of Meeting")
         submit_url_button = gr.Button("Generate Story Angles")
     summary_output = gr.Textbox(label="Suggested Story Angles", interactive=False)
 
