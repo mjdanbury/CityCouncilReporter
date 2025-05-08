@@ -21,7 +21,7 @@ retriever = {}
 def youtube_summary(my_url):
 
     loader = YoutubeLoader.from_youtube_url(
-        my_url, add_video_info=True
+        my_url, add_video_info=False
     )
 
     global docs
