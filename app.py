@@ -161,5 +161,5 @@ with gr.Blocks() as demo:
     gr.ChatInterface(rag_respond)
 
     submit_url_button.click(youtube_summary, inputs=url_input, outputs=summary_output)
-    gr.Markdown('_Known Issue:_ Sometimes, in follow-up questions, the chatbot will claim that a topic listed in the story angles did not come up in the meeting, when in fact it did. To get it chatbot to "remember" this part of the meeting, simply insist "yes, that was discussed". This quirk will hopefully be addressed in future updates.')
+    gr.Markdown('_Known Issue:_ Sometimes, in follow-up questions, the chatbot will claim that a topic listed in the story angles did not come up in the meeting, when in fact it did. To get it chatbot to "remember" this part of the meeting, simply insist "yes, that was discussed".')
 demo.launch()
